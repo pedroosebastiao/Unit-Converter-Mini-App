@@ -45,32 +45,38 @@ export default function App() {
   }
 
   return (
-    <div className="flex flex-col items-center p-4 space-y-4">
-      <h1 className="text-xl font-bold">Unit Converter</h1>
+    <div className="flex flex-col items-center p-4 space-y-4 bg-purple-700 min-h-screen text-white">
+      <h1 className="text-2xl font-bold">Unit Converter</h1>
       <input
         type="number"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        className="border p-2 rounded"
+        className="border p-2 rounded text-black"
         placeholder="Enter value"
       />
       <div className="flex space-x-2">
-        <select value={fromUnit} onChange={(e) => setFromUnit(e.target.value)}>
+        <select value={fromUnit} onChange={(e) => setFromUnit(e.target.value)} className="text-black">
           {Object.keys(units).map((unit) => (
             <option key={unit} value={unit}>{unit}</option>
           ))}
         </select>
         <span className="text-lg">➡</span>
-        <select value={toUnit} onChange={(e) => setToUnit(e.target.value)}>
+        <select value={toUnit} onChange={(e) => setToUnit(e.target.value)} className="text-black">
           {Object.keys(units).map((unit) => (
             <option key={unit} value={unit}>{unit}</option>
           ))}
         </select>
       </div>
-      <button onClick={convert} className="bg-blue-500 text-white p-2 rounded">
+      <button onClick={convert} className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
         Convert
       </button>
       <p className="text-lg font-semibold">Result: {result} {toUnit}</p>
+      
+      {/* Footer */}
+      <footer className="mt-8 text-sm text-center">
+        <p>Created by <a href="https://warpcast.com/pedrooberto" className="underline">@pedrooberto</a></p>
+        <p>Support me: <span className="font-bold">your-crypto-address-here</span></p>
+      </footer>
     </div>
   );
 }
