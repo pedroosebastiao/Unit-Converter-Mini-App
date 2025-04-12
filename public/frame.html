@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unit Converter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Warpcast Frame Metadata -->
+
+    <!-- Warpcast Frame Meta Tags -->
     <meta property="og:title" content="Unit Converter" />
+    <meta property="og:description" content="Convert any unit in seconds!" />
     <meta property="og:image" content="https://warpcast-unit-converter.vercel.app/preview.png" />
     <meta property="fc:frame" content="vNext" />
-    <meta property="fc:frame:post_url" content="https://warpcast-unit-converter.vercel.app/frame.js" />
-    <meta property="fc:frame:button:1" content="Convert" />
+    <meta property="fc:frame:image" content="https://warpcast-unit-converter.vercel.app/preview.png" />
+    <meta property="fc:frame:button:1" content="Open Unit Converter" />
+    <meta property="fc:frame:post_url" content="https://warpcast-unit-converter.vercel.app/" />
+
+    <!-- Inclua os arquivos CSS e JS gerados pelo Vite -->
+    <link rel="stylesheet" href="/assets/index.css" />
+    <script type="module" src="/assets/index.js"></script>
   </head>
   <body>
-    <p>This is a Warpcast Frame.</p>
+    <div id="root"></div>
   </body>
 </html>
