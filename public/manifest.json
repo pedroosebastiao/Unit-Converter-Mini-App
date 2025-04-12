@@ -1,0 +1,11 @@
+{
+  "name": "Unit Converter Frame",
+  "description": "Convert any unit directly inside Warpcast!",
+  "icons": [
+    {
+      "src": "https://warpcast-unit-converter.vercel.app/preview.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
