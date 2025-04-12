@@ -1,3 +1,88 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Container principal do app */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Título */
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+/* Campos de entrada */
+input,
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Botão */
+button {
+  padding: 12px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+/* Resultado */
+.result {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #4f46e5;
+  margin-top: 12px;
+}
+
+/* Responsividade extra */
+@media (max-width: 480px) {
+  #root {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+}
