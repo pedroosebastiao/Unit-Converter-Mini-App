@@ -1,14 +1,26 @@
-export default async function handler(req, res) {
-  res.setHeader("Content-Type", "text/html");
-  res.status(200).send(`
-    <html>
-      <head>
-        <meta property="og:title" content="Conversion Complete!" />
-        <meta property="og:image" content="https://warpcast-unit-converter.vercel.app/preview.png" />
-        <meta property="fc:frame" content="vNext" />
-        <meta property="fc:frame:button:1" content="Convert Again" />
-        <meta property="fc:frame:post_url" content="https://warpcast-unit-converter.vercel.app/api/frame" />
-      </head>
-    </html>
-  `);
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+
+    <!-- Warpcast Frame Meta Tags -->
+    <meta property="og:title" content="Unit Converter" />
+    <meta property="og:description" content="Convert any unit in seconds!" />
+    <meta property="og:image" content="https://warpcast-unit-converter.vercel.app/preview.png" />
+    <meta property="fc:frame" content="vNext" />
+    <meta property="fc:frame:image" content="https://warpcast-unit-converter.vercel.app/preview.png" />
+    <meta property="fc:frame:button:1" content="Open Converter" />
+    <meta property="fc:frame:post_url" content="https://warpcast-unit-converter.vercel.app/" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Script -->
+    <script type="module" src="/assets/index.js"></script>
+  </body>
+</html>
